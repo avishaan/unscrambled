@@ -1,15 +1,15 @@
 {
-  "name": "Font change",
-  "version": "1.0",
+  "name": "bislexic",
+  "version": "0.1",
   "manifest_version": 2,
-  "description": "Font change.",  
+  "description": "Make it easy for dislexic people to read",
   "content_scripts": [ {
-      "all_frames": true,
-      "exclude_globs": [  ],
-      "include_globs": [ "*" ],  
-      "js": [ "script.js" ],
-      "matches": [ "http://*/", "https://*/", "https://*/*", "http://*/*" ],
-      "run_at": "document_end"
-   } ],
+    "all_frames": true,
+    "exclude_globs": [  ],
+    "include_globs": [ "*" ],
+    "js": [ "script.js" ],
+    "matches": [ "http://*/", "https://*/", "https://*/*", "http://*/*" ],
+    "run_at": "document_end"
+  } ],
   "permissions": [ "tabs", "http://*/", "https://*/", "https://*/*", "http://*/*", "contextMenus" ]
 }
