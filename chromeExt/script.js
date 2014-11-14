@@ -6,7 +6,7 @@ console.log("exec script.js");
 (function(){
   var styleNode           = document.createElement ("style");
   styleNode.type          = "text/css";
-  styleNode.textContent   = "@font-face { font-family: Font; src: url('"
+  styleNode.textContent   = "@font-face { font-family: Byslexic; src: url('"
                             + chrome.extension.getURL ("fonts/font.otf")
                             + "'); }"
                             ;
@@ -35,7 +35,7 @@ console.log("exec script.js");
         var node = document.getElementsByTagName(types[i]);
         for(var y=0;y<node.length;y++){
           // add class to matching elements for font style
-          node[y].classList.add("bislexic");
+          node[y].classList.add("byslexic");
         }
       }
     });

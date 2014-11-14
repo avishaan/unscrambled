@@ -1,8 +1,8 @@
-.bislexic {
-  font-family: "Font" !important;
+.byslexic {
+  font-family: "Byslexic" !important;
 }
 
 @font-face {
-  font-family: "bislexic";
+  font-family: "byslexic";
   src: url('chrome-extension://__MSG_@@extension_id__/fonts/font.otf') format('otf');
 }
