@@ -10,21 +10,22 @@ console.log("exec script.js");
                 "from a content script:" + sender.tab.url :
                 "from the extension");
     if (request.greeting == "hello")
+      // perform the font replace
+      replaceFont();
       sendResponse({farewell: "goodbye"});
   });
 
   var replaceFont = function(){
-
-  };
-  chrome.extension.sendRequest({
-    set:"font"
-  },function(response){
-    for(var i=0;i<types.length;i++){
-      var node = document.getElementsByTagName(types[i]);
-      for(var y=0;y<node.length;y++){
-        // replace the font style
-        node[y].style.fontFamily = fontout;
+    chrome.extension.sendRequest({
+      set:"font"
+    },function(response){
+      for(var i=0;i<types.length;i++){
+        var node = document.getElementsByTagName(types[i]);
+        for(var y=0;y<node.length;y++){
+          // replace the font style
+          node[y].style.fontFamily = fontout;
+        }
       }
-    }
-  });
+    });
+  };
 })();

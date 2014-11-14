@@ -12,7 +12,5 @@ $(document).ready(function(){
         console.log(response.farewell);
       });
     });
-    chrome.tabs.executeScript(null,
-      {file:"script.js"});
   });
 });
