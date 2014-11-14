@@ -16,9 +16,9 @@ console.log("exec script.js");
     }
   });
   // insert css first
-//  chrome.tabs.insertCSS(null, {
-//    file: "style.css"
-//  });
+  // chrome.tabs.insertCSS(null, {
+  //   file: "style.css"
+  // });
 
   var replaceFont = function(){
     chrome.extension.sendRequest({
@@ -29,7 +29,7 @@ console.log("exec script.js");
         for(var y=0;y<node.length;y++){
           // replace the font style
           node[y].style.fontFamily = fontout;
-          // add class to font
+          // add class to matching elements 
         }
       }
     });
