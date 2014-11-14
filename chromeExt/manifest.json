@@ -1,13 +1,21 @@
 {
   "name": "bislexic",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
   "description": "Make it easy for dislexic people to read",
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persisent": true
+  },
   "content_scripts": [ {
     "all_frames": true,
     "exclude_globs": [  ],
     "include_globs": [ "*" ],
-    "js": [ "script.js" ],
+    "js": ["./libs/jquery-2.1.1.min.js", "script.js" ],
     "matches": [ "http://*/", "https://*/", "https://*/*", "http://*/*" ],
     "run_at": "document_end"
   } ],
