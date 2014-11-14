@@ -15,7 +15,7 @@ var types = new Array("textarea","input","div","h1","h2","h3","span","p");
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
-    if (request.message == "hello"){
+    if (request.message == "add"){
       // perform the font replace
       replaceFont();
       sendResponse({farewell: "goodbye"});
