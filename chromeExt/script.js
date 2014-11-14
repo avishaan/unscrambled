@@ -27,9 +27,7 @@ console.log("exec script.js");
       for(var i=0;i<types.length;i++){
         var node = document.getElementsByTagName(types[i]);
         for(var y=0;y<node.length;y++){
-          // replace the font style
-          node[y].style.fontFamily = fontout;
-          // add class to matching elements 
+          // add class to matching elements for font style
           node[y].classList.add("bislexic");
         }
       }
