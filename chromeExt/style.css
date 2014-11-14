@@ -3,6 +3,6 @@
 }
 
 @font-face {
-  font-family: "byslexic";
+  font-family: "Font";
   src: url('chrome-extension://__MSG_@@extension_id__/fonts/font.otf') format('otf');
 }

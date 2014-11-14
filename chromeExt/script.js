@@ -1,9 +1,7 @@
 var types = new Array("textarea","input","div","h1","h2","h3","span","p");
-var fontin ="Verdana";
-var fontout = "\'Courier New\'";
-console.log("exec script.js");
 
 (function(){
+  // css font-face for the font
   var styleNode           = document.createElement ("style");
   styleNode.type          = "text/css";
   styleNode.textContent   = "@font-face { font-family: Byslexic; src: url('"
@@ -11,6 +9,7 @@ console.log("exec script.js");
                             + "'); }"
                             ;
   document.head.appendChild (styleNode);
+  // listen to messages
   chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     console.log(sender.tab ?
