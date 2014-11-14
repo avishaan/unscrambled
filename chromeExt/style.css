@@ -1,3 +1,8 @@
 .bislexic {
-    font-family: "Courier New", Georgia, Serif !important;
+  font-family: "Font" !important;
+}
+
+@font-face {
+  font-family: "bislexic";
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/font.otf') format('otf');
 }

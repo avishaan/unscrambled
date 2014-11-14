@@ -4,6 +4,13 @@ var fontout = "\'Courier New\'";
 console.log("exec script.js");
 
 (function(){
+  var styleNode           = document.createElement ("style");
+  styleNode.type          = "text/css";
+  styleNode.textContent   = "@font-face { font-family: Font; src: url('"
+                            + chrome.extension.getURL ("fonts/font.otf")
+                            + "'); }"
+                            ;
+  document.head.appendChild (styleNode);
   chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     console.log(sender.tab ?

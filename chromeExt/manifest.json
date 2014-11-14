@@ -12,7 +12,8 @@
     "persisent": true
   },
   "web_accessible_resources": [
-    "style.css"
+    "style.css",
+    "fonts/*.*"
   ],
   "content_scripts": [ {
     "all_frames": true,
