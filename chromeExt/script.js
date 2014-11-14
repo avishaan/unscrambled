@@ -9,10 +9,11 @@ console.log("exec script.js");
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
-    if (request.greeting == "hello")
+    if (request.message == "hello"){
       // perform the font replace
       replaceFont();
       sendResponse({farewell: "goodbye"});
+    }
   });
 
   var replaceFont = function(){
