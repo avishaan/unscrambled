@@ -13,6 +13,9 @@ console.log("exec script.js");
       sendResponse({farewell: "goodbye"});
   });
 
+  var replaceFont = function(){
+
+  };
   chrome.extension.sendRequest({
     set:"font"
   },function(response){
