@@ -11,11 +11,15 @@
     "scripts": ["background.js"],
     "persisent": true
   },
+  "web_accessible_resources": [
+    "style.css"
+  ],
   "content_scripts": [ {
     "all_frames": true,
     "exclude_globs": [  ],
     "include_globs": [ "*" ],
     "js": ["./libs/jquery-2.1.1.min.js", "script.js" ],
+    "css": ["style.css"],
     "matches": [ "http://*/", "https://*/", "https://*/*", "http://*/*" ],
     "run_at": "document_end"
   } ],
