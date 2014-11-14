@@ -8,10 +8,6 @@ $(document).ready(function(){
     debugger;
     // send message to context script to act
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      // insert css first
-      chrome.tabs.insertCSS(tabs[0].id, {
-        file: "style.css"
-      });
       chrome.tabs.sendMessage(tabs[0].id, {message: "hello"}, function(response) {
         console.log(response.farewell);
       });
