@@ -1,6 +1,6 @@
 {
   "name": "bislexic",
-  "version": "0.2",
+  "version": "0.3",
   "manifest_version": 2,
   "description": "Make it easy for dislexic people to read",
   "browser_action": {
