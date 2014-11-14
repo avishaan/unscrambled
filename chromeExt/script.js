@@ -30,6 +30,7 @@ console.log("exec script.js");
           // replace the font style
           node[y].style.fontFamily = fontout;
           // add class to matching elements 
+          node[y].classList.add("bislexic");
         }
       }
     });
