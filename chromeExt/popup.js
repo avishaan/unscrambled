@@ -1,6 +1,6 @@
 $(document).ready(function(){
   console.log('test');
-  $('ul#messages li a#remove').click(function(){
+  $('#remove').click(function(){
     // send message to context script to act
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, {message: "remove"}, function(response) {
@@ -8,7 +8,7 @@ $(document).ready(function(){
       });
     });
   });
-  $('ul#messages li a#add').click(function(){
+  $('#add').click(function(){
     console.log('add');
     // send message to context script to act
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {

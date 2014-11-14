@@ -17,16 +17,31 @@ var types = new Array("textarea","input","div","h1","h2","h3","span","p");
                 "from the extension");
     if (request.message == "add"){
       // perform the font replace
-      replaceFont();
-      sendResponse({farewell: "goodbye"});
+      addClass();
+    } else if (request.message == "remove"){
+      removeClass();
     }
+      sendResponse({farewell: "goodbye"});
   });
   // insert css first
   // chrome.tabs.insertCSS(null, {
   //   file: "style.css"
   // });
 
-  var replaceFont = function(){
+  var removeClass = function(){
+    chrome.extension.sendRequest({
+      set:"font"
+    },function(response){
+      for(var i=0;i<types.length;i++){
+        var node = document.getElementsByTagName(types[i]);
+        for(var y=0;y<node.length;y++){
+          // remove class from elements
+          node[y].classList.remove("byslexic");
+        }
+      }
+    });
+  };
+  var addClass = function(){
     chrome.extension.sendRequest({
       set:"font"
     },function(response){
