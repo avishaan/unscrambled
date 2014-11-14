@@ -29,29 +29,21 @@ var types = new Array("textarea","input","div","h1","h2","h3","span","p");
   // });
 
   var removeClass = function(){
-    chrome.extension.sendRequest({
-      set:"font"
-    },function(response){
-      for(var i=0;i<types.length;i++){
-        var node = document.getElementsByTagName(types[i]);
-        for(var y=0;y<node.length;y++){
-          // remove class from elements
-          node[y].classList.remove("byslexic");
-        }
+    for(var i=0;i<types.length;i++){
+      var node = document.getElementsByTagName(types[i]);
+      for(var y=0;y<node.length;y++){
+        // remove class from elements
+        node[y].classList.remove("byslexic");
       }
-    });
+    }
   };
   var addClass = function(){
-    chrome.extension.sendRequest({
-      set:"font"
-    },function(response){
-      for(var i=0;i<types.length;i++){
-        var node = document.getElementsByTagName(types[i]);
-        for(var y=0;y<node.length;y++){
-          // add class to matching elements for font style
-          node[y].classList.add("byslexic");
-        }
+    for(var i=0;i<types.length;i++){
+      var node = document.getElementsByTagName(types[i]);
+      for(var y=0;y<node.length;y++){
+        // add class to matching elements for font style
+        node[y].classList.add("byslexic");
       }
-    });
+    }
   };
 })();
