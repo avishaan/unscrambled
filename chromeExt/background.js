@@ -6,17 +6,22 @@ chrome.browserAction.onClicked.addListener(function(tab){
     tabId: tab.id,
   }, function(result){
     if (result === 'off'){
-      // it's off, turn it on
+      // it's off, turn it on and run scripts
       chrome.browserAction.setBadgeText({
         text: enabledText,
         tabId: tab.id
       });
-
+      chrome.tabs.sendMessage(tab.id, {message: "enable"}, function(response){
+        console.log(response);
+      });
     } else {
-      // it's on, turn it off
+      // it's on, turn it off and run scripts
       chrome.browserAction.setBadgeText({
         text: disableText,
         tabId: tab.id
+      });
+      chrome.tabs.sendMessage(tab.id, {message: "disable"}, function(response){
+        console.log(response);
       });
     }
   });
