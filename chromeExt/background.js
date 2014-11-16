@@ -5,7 +5,7 @@ chrome.browserAction.onClicked.addListener(function(tab){
   chrome.browserAction.getBadgeText({
     tabId: tab.id,
   }, function(result){
-    if (result === 'off'){
+    if (result === 'off' || result === ''){
       // it's off, turn it on and run scripts
       chrome.browserAction.setBadgeText({
         text: enabledText,
