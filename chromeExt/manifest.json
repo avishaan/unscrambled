@@ -1,8 +1,8 @@
 {
   "name": "Unscrambled",
-  "version": "0.6",
+  "version": "0.6.1",
   "manifest_version": 2,
-  "description": "Make it easy for dislexic people to read",
+  "description": "Make it easy for dyslexic people to read",
   "icons": {
     "16": "img/icon16.png",
     "48": "img/icon48.png",
