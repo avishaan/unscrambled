@@ -1,7 +1,7 @@
 {
   "name": "Unscrambled for Dyslexics",
   "short_name": "Unscrambled",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "manifest_version": 2,
   "author": "Avishaan @ Codehatcher",
   "description": "Make it easy for dyslexic people to read any website.",
