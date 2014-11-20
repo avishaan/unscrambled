@@ -3,8 +3,13 @@
   text-align: left !important;
   color: #575757 !important;
   line-height: 120%;
+  background-color: #F1F1F1 !important;
 }
-body .byslexic {
+a .byslexic {
+  font-family: "Byslexic" !important;
+  text-align: left !important;
+  color: #575757 !important;
+  line-height: 120%;
   background-color: #F1F1F1 !important;
 }
 

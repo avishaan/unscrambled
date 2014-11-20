@@ -1,4 +1,4 @@
-var types = new Array("textarea","input","div","h1","h2","h3","span","p");
+var types = new Array("textarea","input","div","h1","h2","h3","span","p","li","a");
 
 (function(){
   // css font-face for the font
