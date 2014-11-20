@@ -12,7 +12,7 @@ chrome.browserAction.onClicked.addListener(function(tab){
         tabId: tab.id
       });
       chrome.tabs.sendMessage(tab.id, {message: "enable"}, function(response){
-        console.log(response);
+        // console.log(response);
       });
     } else {
       // it's on, turn it off and run scripts
@@ -21,10 +21,10 @@ chrome.browserAction.onClicked.addListener(function(tab){
         tabId: tab.id
       });
       chrome.tabs.sendMessage(tab.id, {message: "disable"}, function(response){
-        console.log(response);
+        // console.log(response);
       });
     }
   });
   // then set the state based on current state
-  console.log('action clicked');
+  // console.log('action clicked');
 });
